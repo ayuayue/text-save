@@ -2,6 +2,11 @@
 
 A Raycast extension that allows you to save text to a file with various formats.
 
+## Screenshots
+
+![Translation Form](./assets/screenshots/Screenshots.png)
+![Translation Result](./assets/screenshots/Screenshots-setting.png)
+
 ## Features
 
 - Save text to files with different formats (txt, log, md, json, csv, xml, html, css, js, py)
