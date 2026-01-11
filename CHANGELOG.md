@@ -7,18 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2026-01-10
+## [1.0.0] - 2026-01-11
 
 ### Added
 
-- Initial project setup
-- Created CHANGELOG.md file
-
-## [Added a bunch of new feedback] - {PR_MERGE_DATE}
-
-- Improve reliability of `outdated` command
-- Add action to copy formula/cask name
-- Add cask name & tap to cask details
-- Add Toast action to cancel current action
-- Add Toast action to copy error log after failure
+- Initial JWT extension setup
+- Encode JWT functionality with custom headers and payloads
+- Decode JWT functionality with optional verification
+- Support for multiple signing algorithms (HS256, HS384, HS512, RS256, RS384, RS512)
 

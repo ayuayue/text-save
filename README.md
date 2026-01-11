@@ -1,59 +1,70 @@
-# Raycast Text Save Extension
+# Raycast JWT Extension
 
-A Raycast extension that allows you to save text to a file with various formats.
-
-## Screenshots
-
-![Translation Form](./assets/screenshots/Screenshots.png)
-![Translation Result](./assets/screenshots/Screenshots-setting.png)
+A Raycast extension for encoding and decoding JSON Web Tokens (JWT).
 
 ## Features
 
-- Save text to files with different formats (txt, log, md, json, csv, xml, html, css, js, py)
-- Files are saved with timestamp in the filename
-- Default save location: `~/Downloads/raycast-text/`
-- Copy file path to clipboard after saving
-- Clean and intuitive user interface
+### Encode JWT
+
+- Create JWT tokens with custom headers and payloads
+- Support for multiple algorithms (HS256, HS384, HS512, RS256, RS384, RS512)
+- Real-time token generation
+- Copy generated tokens to clipboard
+
+### Decode JWT
+
+- Inspect JWT tokens without verification
+- Verify tokens with secret key
+- View decoded header and payload sections
+- Copy individual sections to clipboard
 
 ## Installation
 
 1. Install the extension from the Raycast Store or build it locally:
 
    ```bash
-   git clone https://github.com/your-repo/text-save.git
-   cd text-save
+   git clone https://github.com/your-repo/jwt.git
+   cd jwt
    npm install
    npm run dev
    ```
 
-2. The extension will be available in your Raycast launcher as "Save Text"
+2. The extension will be available in your Raycast launcher as "JWT"
 
 ## Usage
 
-1. Open Raycast and run the "Save Text" command
-2. Enter or paste the text you want to save in the input area
-3. Choose the desired file format from the dropdown
-4. Click "Save Text" to save the file
-5. The file path will be copied to your clipboard automatically
+### Encode a JWT Token
 
-## File Formats
+1. Open Raycast and run the "Encode" command
+2. Enter the JWT header (default: HS256 algorithm)
+3. Enter the payload data as JSON
+4. Set your secret key
+5. Choose the signing algorithm
+6. Click "Encode JWT" to generate the token
 
-The extension supports saving text in these formats:
+### Decode a JWT Token
 
-- Plain Text (.txt)
-- Log File (.log)
-- Markdown (.md)
-- JSON (.json)
-- CSV (.csv)
-- XML (.xml)
-- HTML (.html)
-- CSS (.css)
-- JavaScript (.js)
-- Python (.py)
+1. Open Raycast and run the "Decode" command
+2. Paste the JWT token you want to inspect
+3. Optionally enable verification and provide secret key
+4. Click "Decode JWT" to view the token contents
+
+## Supported Algorithms
+
+- **HS256**: HMAC using SHA-256
+- **HS384**: HMAC using SHA-384
+- **HS512**: HMAC using SHA-512
+- **RS256**: RSASSA-PKCS1-v1_5 using SHA-256
+- **RS384**: RSASSA-PKCS1-v1_5 using SHA-384
+- **RS512**: RSASSA-PKCS1-v1_5 using SHA-512
 
 ## Configuration
 
-Currently the extension saves files to `~/Downloads/raycast-text/` by default. To change this, modify the `saveDir` variable in `src/save-text.tsx`.
+The extension uses standard JWT practices:
+
+- Default header includes algorithm and token type
+- Payload can contain any valid JSON data
+- Secret keys should be kept secure
 
 ## Contributing
 

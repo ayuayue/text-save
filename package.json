@@ -1,22 +1,30 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "text-save",
-  "title": "Text Save",
-  "description": "save text to file",
+  "name": "jwt-tool",
+  "title": "JWT Tool",
+  "description": "Encode and decode JWT tokens with ease",
   "icon": "extension-icon.png",
   "license": "MIT",
   "commands": [
     {
-      "name": "save-text",
-      "title": "Save Text",
-      "description": "save text to file",
+      "name": "encode",
+      "title": "Encode",
+      "description": "encode jwt payload",
       "mode": "view",
-      "subtitle": "Save Text"
+      "subtitle": "JWT Encode"
+    },
+    {
+      "name": "decode",
+      "title": "Decode",
+      "description": "decode jwt payload",
+      "mode": "view",
+      "subtitle": "JWT Decode"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.103.0",
-    "@raycast/utils": "^2.2.1"
+    "@raycast/utils": "^2.2.1",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.0.4",
@@ -40,6 +48,7 @@
     "macOS"
   ],
   "categories": [
-    "Developer Tools","System"
+    "Developer Tools",
+    "System"
   ]
 }
